@@ -29,7 +29,7 @@ def runApps():
     for app in apps:
         os.startfile(app)
 
-canvas = tk.Canvas(root, height=500, width=500, bg="#67c8eb")
+canvas = tk.Canvas(root, height=500, width=500, bg="#d18034")
 canvas.pack()
 
 frame = tk.Frame(root, bg="white")
