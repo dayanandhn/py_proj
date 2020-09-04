@@ -1,10 +1,10 @@
 import cv2
 import numpy as np
-
+#save the code and the image in a sigle folder
 num_down = 2 # no of downsampling steps and bilateral filtering steps
 num_bilateral = 7
 
-img_rgb = cv2.imread("adiyogi.jpg")
+img_rgb = cv2.imread("<file_name>.jpg")
 print(img_rgb.shape)
 
 #resizing so as ton get optimal result after un sampling ns done
@@ -20,7 +20,7 @@ for _ in range(num_down):
 for _ in range(num_bilateral):
     img_color = cv2.bilateralFilter(img_color, d=9, sigmaColor=9, sigmaSpace=7)
 
-#unsample image to originla size
+#unsample image to original size
 
 for _ in range(num_down):
     img_color = cv2.pyrUp(img_color)
